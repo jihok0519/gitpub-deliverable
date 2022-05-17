@@ -7,7 +7,10 @@
     <title>Gitpub</title>
 </head>
 <body>
-    <h1>Welcome to gitPub</h1>
+    <h1>At foo bar</h1>
+    <h2>Name: <%= food.name %></h2>
+    <img src="<%= food.image %>">
+    <h3>Price: <%= food.price %></h3>
     <style type="text/css">
         body {
             background-color: pink;
@@ -15,18 +18,12 @@
         }
     </style>
     <ul>
-        <% for(let i = 0; i < allDrinks.length; i++) { %>
+        <% for(let j = 0; j < food.length; j++) { %>
             <li>
-                <a href="/drinks/<%= i %>"><%= allDrinks[i].name %></a>
+                <a href="./food/<%= j %>"><%= food[j].name %></a>
             </li>
        <% } %>
     </ul>
-    <ul>
-        <% for(let j = 0; j < allFood.length; j++) { %>
-            <li>
-                <a href="/food/<%= j %>"><%= allFood[j].name %></a>
-            </li>
-       <% } %>
-    </ul>
+    <a href="/food">Back</a>
 </body>
 </html>
