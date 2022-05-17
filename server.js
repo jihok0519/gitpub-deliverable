@@ -4,15 +4,11 @@ const port = 3000;
 
 const drinks = require("./models/drinks.js")
 
-app.get('/', (req, res) => {
-    res.send("Welcome to the Gitpub App!");
-});
-
-app.get('/drinks', (req, res) => {
+app.get('/drinks/', (req, res) => {
     res.render("drinks_index.ejs", {
-        drink: drinks,
+        allDrinks: drinks,
     });
-})
+});
 
 app.listen(port, () => {
     console.log("listening on port ", port);
